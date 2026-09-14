@@ -132,6 +132,42 @@ Session 02~03의 바이브 코딩 실습은 터미널에서 **Claude Code** CLI�
 
 > 💡 VSCode에서는 Extensions(`Ctrl+Shift+X`)에서 `Claude Code` 확장을 설치하면 사이드 패널에서도 같은 기능을 사용할 수 있습니다.
 
+### ANTHROPIC_API_KEY 저장 방법
+
+Claude Code를 브라우저 로그인 대신 API 키로 사용할 때는 `ANTHROPIC_API_KEY`를 아래 세 방법 중 하나로 등록합니다.
+
+**방법 1. 셸 환경변수** — 현재 터미널에서만 유효합니다. 터미널을 닫으면 사라집니다.
+
+```bash
+export ANTHROPIC_API_KEY="sk-ant-api03-..."
+claude
+```
+
+**방법 2. Claude Code 설정 파일** — `~/.claude/settings.json`에 넣으면 터미널·VSCode 어디서든 적용됩니다.
+
+```json
+{
+  "env": {
+    "ANTHROPIC_API_KEY": "sk-ant-api03-...",
+    "ANTHROPIC_MODEL": "claude-sonnet-5"
+  }
+}
+```
+
+**방법 3. VS Code 설정에 직접 넣기 (권장)** — `Cmd/Ctrl + Shift + P` → **Preferences: Open User Settings (JSON)** → 아래를 추가합니다.
+
+```json
+{
+  "claudeCode.environmentVariables": [
+    { "name": "ANTHROPIC_API_KEY", "value": "sk-ant-api03-..." },
+    { "name": "ANTHROPIC_MODEL", "value": "claude-sonnet-5" }
+  ],
+  "claudeCode.disableLoginPrompt": true
+}
+```
+
+> ⚠️ API 키는 절대 git에 커밋하지 마세요. 위 설정 파일들은 모두 저장소 밖(홈 디렉터리·VS Code 사용자 설정)에 있으므로 안전합니다.
+
 ### 저장소 복제 및 환경 구성
 
 먼저 저장소를 복제합니다.
