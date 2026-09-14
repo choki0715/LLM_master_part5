@@ -88,6 +88,50 @@ icacls C:\경로\llm_master_part5.pem /inheritance:r
 icacls C:\경로\llm_master_part5.pem /grant:r "$($env:USERNAME):(R)"
 ```
 
+### Claude Code 설치 (터미널)
+
+Session 02~03의 바이브 코딩 실습은 터미널에서 **Claude Code** CLI를 사용합니다. 서버 접속 후 터미널(`` Ctrl+` ``)에서 아래 순서로 설치합니다.
+
+1. **Claude Code 설치** — 셋 중 하나를 선택합니다. 네이티브 설치 스크립트는 Node.js가 필요 없어 권장합니다.
+
+    ```bash
+    # (권장) 네이티브 설치 스크립트 — Node.js 불필요
+    curl -fsSL https://claude.ai/install.sh | bash
+    ```
+
+    ```bash
+    # npm 설치 — Node.js 18 이상 필요
+    npm install -g @anthropic-ai/claude-code
+    ```
+
+    ```bash
+    # macOS Homebrew
+    brew install --cask claude-code
+    ```
+
+2. **PATH 확인** — 설치 후 `claude` 명령이 안 잡히면 설치 경로를 PATH에 추가합니다.
+
+    ```bash
+    export PATH="$HOME/.local/bin:$PATH"
+    echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+    ```
+
+3. **실행 및 로그인** — 프로젝트 폴더에서 `claude`를 실행하면 브라우저 로그인 창이 열립니다. Claude Pro/Max 구독 계정 또는 Anthropic Console(API) 계정으로 로그인합니다.
+
+    ```bash
+    cd ~/LLM_master_part5
+    claude
+    ```
+
+4. **설치 확인**
+
+    ```bash
+    claude --version
+    claude doctor
+    ```
+
+> 💡 VSCode에서는 Extensions(`Ctrl+Shift+X`)에서 `Claude Code` 확장을 설치하면 사이드 패널에서도 같은 기능을 사용할 수 있습니다.
+
 ### 저장소 복제 및 환경 구성
 
 먼저 저장소를 복제합니다.
