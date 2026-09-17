@@ -143,7 +143,7 @@ mpip "llama-cpp-python==0.3.20" -q || print_warn "llama-cpp-python 설치 실패
 mpip "unsloth" --no-deps -q     || print_warn "Unsloth 설치 실패 — 21 노트북만 영향 (수동: uv pip install unsloth)"
 
 # Agent / MCP / LangGraph (langgraph<1.0)  +  Graph DB / KG
-mpip "mcp[cli]>=1.2.0" "langgraph>=0.2.0,<1.0" -q
+mpip "mcp[cli]>=1.2.0,<2" "langgraph>=0.2.0,<1.0" -q
 mpip "neo4j>=5.0.0" "psycopg2-binary>=2.9.0" "rdflib>=7.0.0" "pyoxigraph>=0.5.0" "faiss-cpu>=1.7.4" -q
 print_ok "메인 스택 설치 완료"
 

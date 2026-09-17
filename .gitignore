@@ -36,3 +36,9 @@ CLAUDE.md
 
 # 바이브 코딩 데모 산출물 (수강생이 직접 생성, 커밋 금지)
 games/
+
+# 별도 저장소 (github.com/choki0715/sf-harness) — 여기서는 커밋하지 않는다
+sf_harness/
+
+# 노트북 실행 산출물 (05 MCP 데모 서버 등)
+output/

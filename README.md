@@ -1,9 +1,9 @@
 # LLM 마스터 과정 특별 교육 시리즈 — Part 5
 
-> **바이브 코딩을 이용한 Agentic AI와 Harness 설계** — 자연어로 코드를 만들고, LLM을 도구·프로토콜과 연결해 스스로 일하는 에이전트를 설계·배포하는 실습 중심 과정
+> **바이브 코딩을 이용한 Agentic AI와 Harness 설계** — 자연어로 코드를 만들고, LLM을 도구·프로토콜과 연결해 스스로 일하는 에이전트를 설계하는 실습 중심 과정
 
 본 저장소는 **LLM 마스터 과정 특별 교육 시리즈(총 5개 파트)** 중 **Part 5**(마지막)의 실습 자료입니다.
-바이브 코딩(Vibe Coding)과 Claude Code에서 출발해 Tool Calling, MCP(Model Context Protocol), A2A(Agent-to-Agent) 프로토콜, LangGraph 멀티 에이전트 워크플로우를 익히고, 데이터 파이프라인 구축 → 프로젝트 학습 → 성능 평가 → 배포까지 하나의 통합 에이전트 프로젝트를 완성하는 과정을 2일 과정으로 다룹니다.
+바이브 코딩(Vibe Coding)과 Claude Code에서 출발해 Tool Calling, MCP(Model Context Protocol), LangGraph 멀티 에이전트 워크플로우까지, LLM을 도구와 연결해 스스로 일하는 에이전트를 설계하는 과정을 2일 과정으로 다룹니다.
 
 ---
 
@@ -26,15 +26,13 @@
 - 바이브 코딩(Vibe Coding)의 개념과 VSCode + Claude Code 개발 환경을 이해하고 구성할 수 있다.
 - Tool Calling(Function Calling)으로 LLM이 외부 도구를 호출하는 메커니즘을 구현할 수 있다.
 - MCP(Model Context Protocol)로 도구를 표준화하여 여러 LLM 호스트에서 재사용할 수 있다.
-- A2A(Agent-to-Agent) 프로토콜로 에이전트 간 통신 기반 멀티 에이전트 시스템을 구축할 수 있다.
-- LangGraph로 Router → Specialist → Answer 형태의 멀티 에이전트 워크플로우를 설계할 수 있다.
-- 데이터 파이프라인 → 프로젝트 학습 → 성능 평가(BLEU·LLM-as-a-Judge) → 배포(FastAPI·Streamlit)의 엔드투엔드 프로젝트를 완성할 수 있다.
+- LangGraph로 Supervisor 패턴의 멀티 에이전트 워크플로우를 설계할 수 있다.
 
 ---
 
 ## 커리큘럼
 
-### 📅 Day 1 (6시간) — 바이브 코딩과 에이전트 프로토콜
+### 📅 Day 1 (6시간) — 바이브 코딩과 Claude Code
 
 | # | 세션 | 노트북 |
 |---|---|---|
@@ -42,19 +40,14 @@
 | 01 | 자연어 처리 기초 — 인코딩, 토큰화, 임베딩(Word2Vec) | [01_nlp_encoding_tokenization.ipynb](01_nlp_encoding_tokenization.ipynb) |
 | 02 | 바이브 코딩(Vibe Coding)이란? | [02_vibe_coding_intro.ipynb](02_vibe_coding_intro.ipynb) |
 | 03 | Claude Code를 이용한 AI Agent 구현 실습 | [03_claude_code_agent.ipynb](03_claude_code_agent.ipynb) |
-| 04 | Tool Calling (Function Calling) 개념 | [04_tool_calling_function.ipynb](04_tool_calling_function.ipynb) |
-| 05 | MCP(Model Context Protocol) 기반 에이전트 구현 | [05_mcp_agent.ipynb](05_mcp_agent.ipynb) |
-| 06 | A2A(Agent-to-Agent) 프로토콜 기반 멀티 에이전트 | [06_a2a_protocol.ipynb](06_a2a_protocol.ipynb) |
 
-### 📅 Day 2 (6시간) — 기술 스택과 통합 프로젝트 (파이프라인 → 학습 → 평가 → 배포)
+### 📅 Day 2 (6시간) — 에이전트 기술 스택 (Tool Calling → MCP → LangGraph)
 
 | # | 세션 | 노트북 |
 |---|---|---|
-| 07 | Agent AI 기술 스택과 LangGraph 기반 멀티 에이전트 워크플로우 | [07_agent_tech_stack_langgraph.ipynb](07_agent_tech_stack_langgraph.ipynb) |
-| 08 | 프로젝트 데이터 파이프라인 구축 | [08_data_pipeline_training.ipynb](08_data_pipeline_training.ipynb) |
-| 09 | 프로젝트 학습 — MCP + LangGraph + A2A 통합 에이전트 | [09_project_training.ipynb](09_project_training.ipynb) |
-| 10 | 프로젝트 성능 평가 및 반복 개선 | [10_evaluation.ipynb](10_evaluation.ipynb) |
-| 11 | 프로젝트 배포 — FastAPI + Streamlit | [11_deployment.ipynb](11_deployment.ipynb) |
+| 04 | Tool Calling (Function Calling)과 Agent 루프 | [04_tool_calling_function.ipynb](04_tool_calling_function.ipynb) |
+| 05 | MCP(Model Context Protocol) 기반 에이전트 구현 | [05_mcp_agent.ipynb](05_mcp_agent.ipynb) |
+| 06 | Agent AI 기술 스택과 LangGraph 기반 멀티 에이전트 워크플로우 | [06_agent_tech_stack_langgraph.ipynb](06_agent_tech_stack_langgraph.ipynb) |
 
 ---
 
